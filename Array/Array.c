@@ -1,3 +1,5 @@
+//Array implemented as an abstract data type
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -22,7 +24,7 @@ void showArray(struct myArray * a){
         printf("%d\n", (a->ptr)[i]);
     }
     
-}
+}   
 
 void setArray(struct myArray * a){
     int n;
@@ -38,8 +40,10 @@ void setArray(struct myArray * a){
 int main(){
     struct myArray arr;
     createArray(&arr, 10, 2);
+
     printf("Enter elements: \n");
     setArray(&arr);
+
     printf("Show elements: \n");
     showArray(&arr);
     return 0;
