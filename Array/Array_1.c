@@ -18,10 +18,19 @@ int Index_Insertion(int arr[], int size, int element, int capacity, int index){
     }
     for (int i = size-1; i >= index; i--)
     {
-        arr[i+1] = arr[i];
+        arr[i + 1] = arr[i];
     }
     arr[index] =  element;
     return 1;
+}
+
+//delection
+void Index_delection(int arr[], int size, int index){
+
+    for (int i = index; i < size-1; i++)
+    {
+        arr[i] = arr[i + 1];
+    }
 }
 
 int main(){
@@ -32,6 +41,11 @@ int main(){
     int element = 27, index = 4;
     Index_Insertion(arr, size, element, 100, index);
     size++;
+    display(arr, size);
+
+    index = 5;
+    Index_delection(arr, size, index);
+    size--;
     display(arr, size);
 
     return 0;
